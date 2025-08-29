@@ -26,26 +26,50 @@ public class dz4Arrays {
             System.out.print(array[i] + " ");
         }
         System.out.println();
+        int[] array2 = new int[array.length];
         System.out.println("Обратный порядок значений массива: ");
-        for (int i = array.length - 1; i >= 0; i--) {
-            System.out.print(array[i] + " ");
+        for (int i = 0; i < array.length; i++) {
+            array2[i] = array[array.length - 1 - i];
+            System.out.print(array2[i] + " ");
         }
+//        System.out.println(Arrays.toString(array2));
+        /*for (int i = array.length - 1; i >= 0; i--) {
+            System.out.print(array[i] + " ");
+        }*/
         System.out.println();
         System.out.println("Задача 2: ");/*Задача 2:
         Найти минимальный-максимальный элементы и вывести в консоль.*/
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
+        int indexMax = -1;
+        int indexMin = -1;
         for (int i = 0; i < array.length; i++) {
             if (array[i] > max) {
                 max = array[i];
+                indexMax = i;
             }
             if (array[i] < min) {
                 min = array[i];
+                indexMin = i;
+
             }
         }
         System.out.println("Максимальное значение массива: " + max);
         System.out.println("Минимальное значение массива: " + min);
         /*Задача 3:*/
+        /*int indexMax = -1;
+        int indexMin = -1;
+        int max1 = Integer.MIN_VALUE;
+        int min1 = Integer.MAX_VALUE;
+        for (int i = 0; i< array.length; i++){
+            if (array[i] > max){
+                indexMin = i;
+            }
+            if (array[i]< min1){
+                indexMax = i;
+            }
+        }*/
+        System.out.println(indexMax + " " + indexMin);
 
         /*
 
