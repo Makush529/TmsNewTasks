@@ -18,12 +18,18 @@ public class dz4Arrays {
             array[i] = (int)(Math.random()*100);
         }
         System.out.println("Значения массива: " + Arrays.toString(array));
+
         /*Задача 1:
         Пройти по массиву, вывести все элементы в прямом и в обратном порядке.*/
         System.out.println("Прямой порядок значений массива: ");
         for (int i = 0; i<array.length; i++){
            System.out.print(array[i] + " ");
        }
+        System.out.println();
+        System.out.println("Обратный порядок значений массива: ");
+        for (int i = array.length-1; i>=0; i--){
+            System.out.print(array[i] + " ");
+        }
         /*Задача 2:
         Найти минимальный-максимальный элементы и вывести в консоль.
                 teachmeskills.by
