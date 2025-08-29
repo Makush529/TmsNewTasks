@@ -14,26 +14,41 @@ public class dz4Arrays {
         System.out.println("Введите величину массива");
         int alenght = scan.nextInt();
         int[] array = new int[alenght];
-        for (int i = 0; i<array.length; i++){
-            array[i] = (int)(Math.random()*100);
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) (Math.random() * 100);
         }
         System.out.println("Значения массива: " + Arrays.toString(array));
 
-        /*Задача 1:
+        System.out.println("Задача 1: ");/*Задача 1:
         Пройти по массиву, вывести все элементы в прямом и в обратном порядке.*/
         System.out.println("Прямой порядок значений массива: ");
-        for (int i = 0; i<array.length; i++){
-           System.out.print(array[i] + " ");
-       }
-        System.out.println();
-        System.out.println("Обратный порядок значений массива: ");
-        for (int i = array.length-1; i>=0; i--){
+        for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
-        /*Задача 2:
-        Найти минимальный-максимальный элементы и вывести в консоль.
-                teachmeskills.by
-        Задача 3:
+        System.out.println();
+        System.out.println("Обратный порядок значений массива: ");
+        for (int i = array.length - 1; i >= 0; i--) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+        System.out.println("Задача 2: ");/*Задача 2:
+        Найти минимальный-максимальный элементы и вывести в консоль.*/
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+        System.out.println("Максимальное значение массива: " + max);
+        System.out.println("Минимальное значение массива: " + min);
+        /*Задача 3:*/
+
+        /*
+
         Найти индексы минимального и максимального элементов и вывести в консоль.
         Задача 4:
         Найти и вывести количество нулевых элементов. Если нулевых элементов нет - вывести
