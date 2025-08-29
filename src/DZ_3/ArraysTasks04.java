@@ -1,4 +1,4 @@
-package ArraysTasks;
+package DZ_3;
 
 import java.util.Scanner;
 
