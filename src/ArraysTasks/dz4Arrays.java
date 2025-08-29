@@ -11,15 +11,20 @@ public class dz4Arrays {
         пользователем вручную. Попробовать оба варианта. После заполнения массива
         данными, решить для него следующие задачи:*/
         Scanner scan = new Scanner(System.in);
+        System.out.println("Введите величину массива");
         int alenght = scan.nextInt();
         int[] array = new int[alenght];
         for (int i = 0; i<array.length; i++){
             array[i] = (int)(Math.random()*100);
         }
-        System.out.println(Arrays.toString(array));
+        System.out.println("Значения массива: " + Arrays.toString(array));
         /*Задача 1:
-        Пройти по массиву, вывести все элементы в прямом и в обратном порядке.
-        Задача 2:
+        Пройти по массиву, вывести все элементы в прямом и в обратном порядке.*/
+        System.out.println("Прямой порядок значений массива: ");
+        for (int i = 0; i<array.length; i++){
+           System.out.print(array[i] + " ");
+       }
+        /*Задача 2:
         Найти минимальный-максимальный элементы и вывести в консоль.
                 teachmeskills.by
         Задача 3:
