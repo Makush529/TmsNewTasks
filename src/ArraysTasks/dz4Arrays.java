@@ -56,7 +56,9 @@ public class dz4Arrays {
         }
         System.out.println("Максимальное значение массива: " + max);
         System.out.println("Минимальное значение массива: " + min);
-        /*Задача 3:*/
+        System.out.println("Задача 3:");
+        /*
+        Найти индексы минимального и максимального элементов и вывести в консоль.*/
         /*int indexMax = -1;
         int indexMin = -1;
         int max1 = Integer.MIN_VALUE;
@@ -69,15 +71,27 @@ public class dz4Arrays {
                 indexMax = i;
             }
         }*/
-        System.out.println(indexMax + " " + indexMin);
 
-        /*
+        System.out.println("Индекс максимального значения: " + indexMax);
+        System.out.println("Индекс минимального значения: " + indexMin);
 
-        Найти индексы минимального и максимального элементов и вывести в консоль.
-        Задача 4:
+
+        System.out.println("Задача 4:");/*Задача 4:
         Найти и вывести количество нулевых элементов. Если нулевых элементов нет - вывести
-        сообщение, что их нет.
-        Задача 5:
+        сообщение, что их нет.*/
+        int koll = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == 0) {
+                koll = koll+1;
+            }
+        }
+        if (koll == 0) {
+            System.out.println("Нулевых элеменьов в массиве нет");
+        } else {
+            System.out.println("Количество нулевых элементов в массиве: " + koll);
+        }
+
+        /*Задача 5:
         Пройти по массиву и поменять местами элементы первый и последний, второй и
         предпоследний и т.д.
                 Задача 6:
