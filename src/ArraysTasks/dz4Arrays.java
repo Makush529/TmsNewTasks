@@ -32,10 +32,7 @@ public class dz4Arrays {
             array2[i] = array[array.length - 1 - i];
             System.out.print(array2[i] + " ");
         }
-//        System.out.println(Arrays.toString(array2));
-        /*for (int i = array.length - 1; i >= 0; i--) {
-            System.out.print(array[i] + " ");
-        }*/
+
         System.out.println();
         System.out.println("Задача 2: ");/*Задача 2:
         Найти минимальный-максимальный элементы и вывести в консоль.*/
@@ -56,23 +53,9 @@ public class dz4Arrays {
         }
         System.out.println("Максимальное значение массива: " + max);
         System.out.println("Минимальное значение массива: " + min);
-        System.out.println("Задача 3:");
-        /*
+        System.out.println("Задача 3:");/*Задача 3:
         Найти индексы минимального и максимального элементов и вывести в консоль.*/
-        /*int indexMax = -1;
-        int indexMin = -1;
-        int max1 = Integer.MIN_VALUE;
-        int min1 = Integer.MAX_VALUE;
-        for (int i = 0; i< array.length; i++){
-            if (array[i] > max){
-                indexMin = i;
-            }
-            if (array[i]< min1){
-                indexMax = i;
-            }
-        }*/
-
-        System.out.println("Индекс максимального значения: " + indexMax);
+                System.out.println("Индекс максимального значения: " + indexMax);
         System.out.println("Индекс минимального значения: " + indexMin);
 
 
@@ -91,8 +74,8 @@ public class dz4Arrays {
             System.out.println("Количество нулевых элементов в массиве: " + koll);
         }
 
-        System.out.println("Задача 5:");
-        /*Пройти по массиву и поменять местами элементы первый и последний, второй и
+        System.out.println("Задача 5:");/*Задача 5:
+        Пройти по массиву и поменять местами элементы первый и последний, второй и
         предпоследний и т.д.*/
 
         int[] array3 = array.clone();
@@ -111,25 +94,22 @@ public class dz4Arrays {
         System.out.println("Значения массива после замены: " + Arrays.toString(array3));
 
 
-
-
-
-        System.out.println("Задача 6:");
-        /*Проверить, является ли массив возрастающей последовательностью (каждое следующее
+        System.out.println("Задача 6:");/*Задача 6:
+        Проверить, является ли массив возрастающей последовательностью (каждое следующее
         число больше предыдущего).*/
         System.out.println(Arrays.toString(array));
-        boolean rezult=true;
-        for (int i =0; i<array.length-1;i++){//ArrayIndexOutOfBoundsException!!!!
-            if (array[i]>array[i+1]){
-                rezult=false;
+        boolean rezult = true;
+        for (int i = 0; i < array.length - 1; i++) {//ArrayIndexOutOfBoundsException!!!!
+            if (array[i] > array[i + 1]) {
+                rezult = false;
                 break;
             }
         }
         System.out.println("Массив с возрастающей последовательностью: " + rezult);
 
-        }
+    }
 
-        }
+}
 
 
 
