@@ -93,8 +93,23 @@ public class dz4Arrays {
 
         /*Задача 5:
         Пройти по массиву и поменять местами элементы первый и последний, второй и
-        предпоследний и т.д.
-                Задача 6:
+        предпоследний и т.д.*/
+        int leftIndex = 0;
+        int rightIndex = array.length-1;
+        int temp;
+        for (int i = 0; leftIndex<rightIndex; i++){
+            temp = array[leftIndex];
+            array[leftIndex]=array[rightIndex];
+            array[rightIndex]=temp;
+            leftIndex = leftIndex+1;
+            rightIndex = rightIndex-1;
+
+        }
+        System.out.println(Arrays.toString(array));
+
+
+
+                /*Задача 6:
         Проверить, является ли массив возрастающей последовательностью (каждое следующее
         число больше предыдущего).
         Задача *:
