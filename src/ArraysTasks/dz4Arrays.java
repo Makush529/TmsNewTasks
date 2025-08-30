@@ -82,7 +82,7 @@ public class dz4Arrays {
         int koll = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 0) {
-                koll = koll+1;
+                koll = koll + 1;
             }
         }
         if (koll == 0) {
@@ -91,21 +91,24 @@ public class dz4Arrays {
             System.out.println("Количество нулевых элементов в массиве: " + koll);
         }
 
-        /*Задача 5:
-        Пройти по массиву и поменять местами элементы первый и последний, второй и
+        System.out.println("Задача 5:");
+        /*Пройти по массиву и поменять местами элементы первый и последний, второй и
         предпоследний и т.д.*/
+
+        int[] array3 = array.clone();
         int leftIndex = 0;
-        int rightIndex = array.length-1;
+        int rightIndex = array3.length - 1;
         int temp;
-        for (int i = 0; leftIndex<rightIndex; i++){
-            temp = array[leftIndex];
-            array[leftIndex]=array[rightIndex];
-            array[rightIndex]=temp;
-            leftIndex = leftIndex+1;
-            rightIndex = rightIndex-1;
+        for (int i = 0; leftIndex < rightIndex; i++) {
+            temp = array3[leftIndex];
+            array3[leftIndex] = array3[rightIndex];
+            array3[rightIndex] = temp;
+            leftIndex = leftIndex + 1;
+            rightIndex = rightIndex - 1;
 
         }
-        System.out.println(Arrays.toString(array));
+        System.out.println("Исходные значения массива: " + Arrays.toString(array));
+        System.out.println("Значения массива после замены: " + Arrays.toString(array3));
 
 
 
@@ -123,4 +126,5 @@ public class dz4Arrays {
         Input: [9,9,9]
         Output: [1,0,0,0]*/
     }
+
 }
