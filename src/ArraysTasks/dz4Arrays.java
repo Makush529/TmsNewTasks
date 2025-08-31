@@ -55,7 +55,7 @@ public class dz4Arrays {
         System.out.println("Минимальное значение массива: " + min);
         System.out.println("Задача 3:");/*Задача 3:
         Найти индексы минимального и максимального элементов и вывести в консоль.*/
-                System.out.println("Индекс максимального значения: " + indexMax);
+        System.out.println("Индекс максимального значения: " + indexMax);
         System.out.println("Индекс минимального значения: " + indexMin);
 
 
@@ -106,14 +106,8 @@ public class dz4Arrays {
             }
         }
         System.out.println("Массив с возрастающей последовательностью: " + rezult);
-
-    }
-
-}
-
-
-
-        /*Задача *:
+        System.out.println("Задача *:");
+/*Задача *:
         Имеется массив из неотрицательных чисел(любой). Представьте что массив
         представляет целое число (Например массив {1,2,3} -> 123, {9,9,9} -> 999). Задача
         добавить единицу к этому “числу” и на выходе получить исправленный массив. Массив не
@@ -123,4 +117,37 @@ public class dz4Arrays {
         Output: [1,4,0,5,6,4]
         Input: [9,9,9]
         Output: [1,0,0,0]*/
+        int[] array5 = {1, 4, 0, 5, 6, 3};
+        int[] array7 = {9, 9, 9};
+
+        myArray(array5);
+        myArray(array7);
+    }
+
+    public static void myArray(int[] array6) {
+        System.out.println("Исходный массив: " + Arrays.toString(array6));
+        for (int i = array6.length - 1; i >= 0; i--) {
+            if (array6[i] < 9) {
+                array6[i]++;
+                break;
+            } else {
+                array6[i] = 0;
+            }
+
+        }
+        if (array6[0] == 0) {
+            int[] newArray6 = new int[array6.length + 1];
+            newArray6[0] = 1;
+            array6 = newArray6;
+
+        }
+        System.out.println("Массив уведиченный на единицу: " + Arrays.toString(array6));
+
+    }
+
+}
+
+
+
+
 
