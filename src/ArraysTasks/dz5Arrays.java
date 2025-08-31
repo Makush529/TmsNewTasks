@@ -32,9 +32,6 @@ public class dz5Arrays {
                 //System.out.print(array1[i][j] + " ");
                 sumElement = sumElement + array1[i][j];
             }
-
-            System.out.println();
-
         }
         System.out.println(Arrays.deepToString(array1));
         System.out.println("Задача 1.3:");
@@ -54,13 +51,13 @@ public class dz5Arrays {
         B W B W B W B W
         W B W B W B W B
         B W B W B W B W*/
-        String[][] chess= new String[8][8];
+        String[][] chess = new String[8][8];
 
-        for (int i = 0; i<chess.length; i++){
-            for (int j= 0; j<chess[i].length; j++){
-                if ((i+j)%2==0){
+        for (int i = 0; i < chess.length; i++) {
+            for (int j = 0; j < chess[i].length; j++) {
+                if ((i + j) % 2 == 0) {
                     System.out.print(" W ");
-                }else {
+                } else {
                     System.out.print(" B ");
                 }
 
@@ -69,8 +66,32 @@ public class dz5Arrays {
         }
 
 
-        /*Задача *:
-        Даны числа n и m. Создайте массив A[n][m] и заполните его змейкой (см. пример).
+        System.out.println("Задача*():");/*Задача *:*/
+        System.out.println("Введите количество строк");
+        int sizeI = scanner.nextInt();
+        System.out.println("Введите количество столбцов");
+        int sizeJ = scanner.nextInt();
+        int[][] snake = new int[sizeI][sizeJ];
+        int firstNumber = 0;
+        for (int i = 0; i < sizeI; i++) {
+            if (i % 2 == 0) {
+                for (int j = 0; j < sizeJ; j++) {
+                    snake[i][j] = firstNumber++;
+                }
+            } else {
+                for (int j = sizeJ - 1; j >= 0; j--) {
+                    snake[i][j] = firstNumber++;
+                }
+            }
+        }
+        for (int i = 0; i < sizeI; i++) {
+            for (int j = 0; j < sizeJ; j++) {
+                System.out.printf("%3d", snake[i][j]);
+            }
+            System.out.println();
+        }
+        scanner.close();
+        /*Даны числа n и m. Создайте массив A[n][m] и заполните его змейкой (см. пример).
                 Формат входных данных:
         Программа получает на вход два числа n и m.
                 Формат выходных данных:
