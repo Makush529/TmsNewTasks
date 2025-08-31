@@ -1,27 +1,48 @@
 package ArraysTasks;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.SimpleTimeZone;
 
 public class dz5Arrays {
     public static void main(String[] args) {
-        /*Задача 1:
+        System.out.println("Задача 1.1:");/*Задача 1:
         1.1 Создать двумерный массив, заполнить его случайными числами.
         1.2 Добавить к каждому значению число, которое пользователь будет вводить с консоли.
         1.3 Найти сумму всех получившихся элементов и вывести в консоль.*/
         Scanner scanner = new Scanner(System.in);
-        int sizeArrayI = (int)(Math.random()*10);
-        int sizeArraiJ = (int)(Math.random()*10);
-        int[][] array1=new int[sizeArrayI][sizeArraiJ];
-        for (int i = 0; i<sizeArrayI; i++){
-            for (int j = 0; j<sizeArraiJ; j++){
-                array1[i][j]=(int)(Math.random()*10);
+        Random random = new Random();
+        int sizeArrayI = random.nextInt(1, 5);
+        int sizeArraiJ = random.nextInt(1, 5);
+        int[][] array1 = new int[sizeArrayI][sizeArraiJ];
+        for (int i = 0; i < sizeArrayI; i++) {
+            for (int j = 0; j < sizeArraiJ; j++) {
+                array1[i][j] = random.nextInt(0, 10);
             }
         }
+        System.out.println("Исходный массив:" + Arrays.deepToString(array1));
+        System.out.println("Задача 1.2: ");
+        System.out.println("Введите число для добавления к каждому значению: ");
+        int myNum = scanner.nextInt();
+        int sumElement = 0;
+        for (int i = 0; i < sizeArrayI; i++) {
+            for (int j = 0; j < sizeArraiJ; j++) {
+                array1[i][j] = array1[i][j] + myNum;
+                //System.out.print(array1[i][j] + " ");
+                sumElement = sumElement + array1[i][j];
+            }
+
+            System.out.println();
+
+        }
         System.out.println(Arrays.deepToString(array1));
-                /*Задача 2:
-        Создать программу для раскраски шахматной доски с помощью цикла. Создать
+        System.out.println("Задача 1.3:");
+        System.out.println("Сумма всех значений элементов: " + sumElement);
+
+
+        System.out.println("Задача 2:");
+        /*Создать программу для раскраски шахматной доски с помощью цикла. Создать
         двумерный массив String 8х8. С помощью циклов задать элементам массива значения
         B(Black) или W(White). При выводе результат работы программы должен быть
         следующим:
@@ -33,6 +54,20 @@ public class dz5Arrays {
         B W B W B W B W
         W B W B W B W B
         B W B W B W B W*/
+        String[][] chess= new String[8][8];
+
+        for (int i = 0; i<chess.length; i++){
+            for (int j= 0; j<chess[i].length; j++){
+                if ((i+j)%2==0){
+                    System.out.print(" W ");
+                }else {
+                    System.out.print(" B ");
+                }
+
+            }
+            System.out.println();
+        }
+
 
         /*Задача *:
         Даны числа n и m. Создайте массив A[n][m] и заполните его змейкой (см. пример).
