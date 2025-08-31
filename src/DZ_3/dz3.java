@@ -2,7 +2,7 @@ package DZ_3;
 
 import java.util.Scanner;
 
-public class ArraysTasks04 {
+public class dz3 {
     public static void main(String[] args) {
         /*Задача 1:
         Напишите программу, которая будет принимать на вход число из консоли и на выход
