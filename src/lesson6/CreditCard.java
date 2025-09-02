@@ -27,8 +27,12 @@ public class CreditCard {
     }
 
     void addCash(int cash) {
-        sumAccountNumber = sumAccountNumber + cash;
-        System.out.println("Сумма на счете " + accountNumber + " составляет " + sumAccountNumber);
+        if (cash <= 0) {
+            System.out.println("Сумма зачисления должна быть больше 0 ");
+        } else {
+            sumAccountNumber = sumAccountNumber + cash;
+            System.out.println("Сумма на счете " + accountNumber + " составляет " + sumAccountNumber);
+        }
     }
 
     void infoAccountNumber() {
