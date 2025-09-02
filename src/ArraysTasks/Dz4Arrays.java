@@ -3,7 +3,7 @@ package ArraysTasks;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class dz4Arrays {
+public class Dz4Arrays {
     public static void main(String[] args) {
         /*Для всех задач исходные условия следующие: пользователь с клавиатуры вводит размер
         массива (просто целое число). После того, как размер массива задан, заполнить его

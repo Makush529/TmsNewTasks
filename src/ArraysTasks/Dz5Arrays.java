@@ -3,9 +3,8 @@ package ArraysTasks;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.SimpleTimeZone;
 
-public class dz5Arrays {
+public class Dz5Arrays {
     public static void main(String[] args) {
         System.out.println("Задача 1.1:");/*Задача 1:
         1.1 Создать двумерный массив, заполнить его случайными числами.
