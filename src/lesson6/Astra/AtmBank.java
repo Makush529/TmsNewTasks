@@ -55,16 +55,22 @@ public class AtmBank {
                 cash = cash - numCash[i] * values[i];
             } else {
                 numCash[i] = cash / values[i];
-                cash = cash - numCash[i]*values[i];
+                cash = cash - numCash[i] * values[i];
             }
         }
         if (cash != 0) {
             System.out.println("vse");
             return false;
+        }
+        //количество купюр в банкомате
+        numTwenty = -numCash[2];
+        numFifty = -numCash[1];
+        numHundred = -numCash[0];
 
-
-        }System.out.println(" 100: " + numCash[0] + " 50: " + numCash[1] + " 20: " + numCash[2]);
+        System.out.println(" 100: " + numCash[0] + " 50: " + numCash[1] + " 20: " + numCash[2]);
         return true;
+
+
     }
 
 
