@@ -2,12 +2,23 @@ package lesson7;
 
 public class Main {
     public static void main(String[] args) {
-        Doctor doctor = new Doctor("Терапевт","Николас","Мадуро",2);
-        Therapist therapist = new Therapist("Терапевт", "Форест", "Гамп,",0);
+        Doctor therapist = new Therapist ();
+        Doctor berserk = new Berserk ();
+        Doctor dantist = new Dantist();
 
-        Patient patient1 = new Patient("Иван", "Иваныч", 1);
+        Doctor[] doctors = {therapist,berserk,dantist};
 
-        patient1.hisDoctor();
+        Patient patient = new Patient("Dan", 12 );
+
+        patient.hisDoctor(doctors);
+        patient.hisTreat();
+
+
+
+
+
+
+
 
 
     }

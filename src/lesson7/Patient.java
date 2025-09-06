@@ -2,21 +2,35 @@ package lesson7;
 
 public class Patient {
     String name;
-    String lastName;
     int treatPlan;//метод лечения
-    Doctor doctor;//типа лечащий врач
+    Doctor hisDoctor;
 
-    public Patient(String name, String lastName, int treatPlan) {
+
+    public Patient(String name, int treatPlan) {
         this.name = name;
-        this.lastName = lastName;
         this.treatPlan = treatPlan;
-        this.doctor = doctor;
+    }
+    public Patient(String name) {
+        this.name = name;
+
     }
 
-    public void hisDoctor() {
-        if (treatPlan == 1) {
-            doctor = new Doctor("Терапевт");//бред собачий, разобраться
-            System.out.println();
+    public void hisDoctor(Doctor[] doctors) {//назначить доктора
+
+        for (Doctor doctor : doctors) {
+            if (doctor.getTreatPlan() == treatPlan) {
+                hisDoctor = doctor;
+                break;
+            }
+        }
+
+    }
+
+    public void hisTreat() {
+        if (hisDoctor != null) {
+            hisDoctor.treat();
+        } else {
+            System.out.println("Некому лечить..");
         }
     }
 }

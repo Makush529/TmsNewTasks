@@ -1,27 +1,32 @@
 package lesson7;
 
 public class Doctor {
-    String name;
-    String lastName;
     String specialty;
-    int age;
+    int treatPlan;
 
-    public Doctor(String specialty, String name, String lastName, int age) {
+    public Doctor(String specialty, int treatPlan) {
         this.specialty = specialty;
-        this.name = name;
-        this.lastName = lastName;
-        this.age = age;
-    }
+        this.treatPlan = treatPlan;
 
-    public Doctor(String specialty, String name) {
-        this.specialty = specialty;
-        this.name = name;
-    }
+        }
 
     public Doctor(String specialty) {
         this.specialty = specialty;
+
     }
-    public void treat(){}
+
+    public String getSpecialty() {
+        return specialty;
+    }
+
+    public int getTreatPlan() {
+        return treatPlan;
+    }
+
+    public void treat(){//добавить пациента
+
+    }
+
 }
     /* Создать программу для имитации работы клиники. Пусть в клинике будет три врача:
  хирург, терапевт и дантист. Каждый врач имеет метод «лечить», но каждый врач лечит
