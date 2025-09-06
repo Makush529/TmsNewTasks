@@ -1,8 +1,8 @@
 package lesson7;
 
 public class Doctor {
-    String specialty;
-    int treatPlan;
+    protected String specialty;
+    protected int treatPlan;
 
     public Doctor(String specialty, int treatPlan) {
         this.specialty = specialty;

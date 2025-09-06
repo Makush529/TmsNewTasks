@@ -1,9 +1,9 @@
 package lesson7;
 
 public class Patient {
-    String name;
-    int treatPlan;//метод лечения
-    Doctor hisDoctor;
+    protected String name;
+    protected int treatPlan;//метод лечения
+    protected Doctor hisDoctor;
 
 
     public Patient(String name, int treatPlan) {
