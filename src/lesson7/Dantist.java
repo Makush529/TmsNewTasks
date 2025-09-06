@@ -6,6 +6,6 @@ public class Dantist extends Doctor {
     }
 
     public void treat(Patient patient) {
-        System.out.println("Дантист сверлит зубы");
+        System.out.println("Дантист полечит зубы");
     }
 }

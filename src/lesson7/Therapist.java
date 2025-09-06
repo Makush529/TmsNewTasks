@@ -1,12 +1,12 @@
 package lesson7;
 
-public class Therapist extends Doctor{
+public class Therapist extends Doctor {
     public Therapist() {
         super("Терапевт", 0);
     }
 
-    public void treat(Patient patient){
-        System.out.println("Терапевтическое лечение: " + patient.getName());//доделать
+    public void treat(Patient patient) {
+        System.out.println("Терапевтическое лечение: " + patient.getName());
     }
-    
+
 }

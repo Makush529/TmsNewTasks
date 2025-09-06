@@ -11,15 +11,6 @@ public class Patient {
         this.treatPlan = treatPlan;
     }
 
-    public int getTreatPlan() {
-        return treatPlan;
-    }
-
-    public Patient(String name) {
-        this.name = name;
-
-    }
-
     public void hisDoctor(Doctor[] doctors) {//назначить доктора
 
         for (Doctor doctor : doctors) {
@@ -27,6 +18,17 @@ public class Patient {
                 hisDoctor = doctor;
                 System.out.println("Назначен лечащий врач: " + doctor.specialty);
                 break;
+            }
+        }
+        if (hisDoctor == null) {
+            for (Doctor doctor : doctors) {
+                if (doctor.getSpecialty().equals("Терапевт")) {
+                    hisDoctor = doctor;
+                    System.out.println("Назначен лечащий врач: " + doctor.getSpecialty());
+                    break;
+                } else {
+                    System.out.println("Тут мог бы помочь терапевт, но его нет");
+                }
             }
         }
 
@@ -40,7 +42,7 @@ public class Patient {
         if (hisDoctor != null) {
             hisDoctor.treat(this);
         } else {
-            System.out.println("Некому лечить: " + this.name);
+            System.out.println(this.name + " остался без лечения");
         }
     }
 }
