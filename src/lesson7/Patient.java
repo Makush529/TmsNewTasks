@@ -10,6 +10,11 @@ public class Patient {
         this.name = name;
         this.treatPlan = treatPlan;
     }
+
+    public int getTreatPlan() {
+        return treatPlan;
+    }
+
     public Patient(String name) {
         this.name = name;
 
@@ -20,17 +25,22 @@ public class Patient {
         for (Doctor doctor : doctors) {
             if (doctor.getTreatPlan() == treatPlan) {
                 hisDoctor = doctor;
+                System.out.println("Назначен лечащий врач: " + doctor.specialty);
                 break;
             }
         }
 
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void hisTreat() {
         if (hisDoctor != null) {
-            hisDoctor.treat();
+            hisDoctor.treat(this);
         } else {
-            System.out.println("Некому лечить..");
+            System.out.println("Некому лечить: " + this.name);
         }
     }
 }

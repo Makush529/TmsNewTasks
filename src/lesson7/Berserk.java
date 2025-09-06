@@ -6,7 +6,7 @@ public class Berserk extends Doctor{
         super("Хирург", 1);
     }
 
-    public void treat() {
+    public void treat(Patient patient) {
         System.out.println("Хирург лечит ножом");
     }
 }

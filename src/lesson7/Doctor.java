@@ -10,10 +10,6 @@ public class Doctor {
 
         }
 
-    public Doctor(String specialty) {
-        this.specialty = specialty;
-
-    }
 
     public String getSpecialty() {
         return specialty;
@@ -23,7 +19,7 @@ public class Doctor {
         return treatPlan;
     }
 
-    public void treat(){//добавить пациента
+    public void treat(Patient patient){//добавить пациента
 
     }
 

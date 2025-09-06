@@ -5,7 +5,7 @@ public class Dantist extends Doctor {
         super("Дантист", 2);
     }
 
-    public void treat() {
+    public void treat(Patient patient) {
         System.out.println("Дантист сверлит зубы");
     }
 }

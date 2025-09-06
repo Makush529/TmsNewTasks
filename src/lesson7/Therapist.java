@@ -5,7 +5,8 @@ public class Therapist extends Doctor{
         super("Терапевт", 0);
     }
 
-    public void treat(){
-        System.out.println("Терапевт лечит как терапевт");//доделать
+    public void treat(Patient patient){
+        System.out.println("Терапевтическое лечение: " + patient.getName());//доделать
     }
+    
 }

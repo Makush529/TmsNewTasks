@@ -8,10 +8,10 @@ public class Main {
 
         Doctor[] doctors = {therapist,berserk,dantist};
 
-        Patient patient = new Patient("Dan", 12 );
+        Patient patient = new Patient("Dan");
 
         patient.hisDoctor(doctors);
-        patient.hisTreat();
+
 
 
 
