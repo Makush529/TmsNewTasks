@@ -1,4 +1,4 @@
-package DZ_3;
+package lesson3;
 
 import java.util.Scanner;
 
