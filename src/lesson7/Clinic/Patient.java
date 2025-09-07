@@ -1,4 +1,4 @@
-package lesson7;
+package lesson7.Clinic;
 
 public class Patient {
     protected String name;
