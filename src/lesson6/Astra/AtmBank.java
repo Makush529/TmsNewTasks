@@ -8,15 +8,12 @@ public class AtmBank {
     операции. При снятии денег, функция должна распечатывать каким количеством купюр
     какого номинала выдаётся сумма. Создать конструктор с тремя параметрами -
     количеством купюр каждого номинала.*/
-    int twenty;
-    int fifty;
-    int hundred;
+
     //количество купюр в баномате
     int numTwenty;
     int numFifty;
     int numHundred;
-    //сумма денег в банкомате
-    //int sumMoney=twenty*numTwenty+fifty*numFifty+hundred*numHundred;
+
 
     public AtmBank(int numHundred, int numFifty, int numTwenty) {
         this.numHundred = numHundred;
@@ -40,6 +37,7 @@ public class AtmBank {
     }
 
     boolean withdraft(int cash) {
+        System.out.println("Сумма снятия: " + cash);
         int sumMoney = 20 * numTwenty + 50 * numFifty + 100 * numHundred;
         if (sumMoney < cash || cash < 20 || cash % 10 != 0) {
             System.out.println("Некорректная сумма либо недостаточно средств для выдачи");
@@ -63,14 +61,18 @@ public class AtmBank {
             return false;
         }
         //количество купюр в банкомате
-        numTwenty = -numCash[2];
-        numFifty = -numCash[1];
-        numHundred = -numCash[0];
+        numTwenty = numTwenty-numCash[2];
+        numFifty = numFifty-numCash[1];
+        numHundred = numHundred-numCash[0];
 
-        System.out.println(" 100: " + numCash[0] + " 50: " + numCash[1] + " 20: " + numCash[2]);
+        System.out.println("Выдынно купюр 100: " + numCash[0] + "; Выданно купюр 50: " + numCash[1] + "; Выданно купюр 20: " + numCash[2]);
         return true;
 
 
+    }
+
+    void infoAtmBank(){
+        System.out.println("Остаток купюр в банокмате, 100: " + numHundred + "; 50: "+ numFifty + "; 20 " +numTwenty);
     }
 
 

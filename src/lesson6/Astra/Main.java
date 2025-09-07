@@ -6,5 +6,7 @@ public class Main {
 
         bankomat.addCash(10,10,10);
         bankomat.withdraft(470);
+
+        bankomat.infoAtmBank();
     }
 }
