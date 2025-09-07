@@ -1,4 +1,4 @@
-package ArraysTasks;
+package lesson4Lesson5;
 
 import java.util.Arrays;
 import java.util.Random;
