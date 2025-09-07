@@ -1,4 +1,4 @@
-package lesson6;
+package lesson6.CreditCard;
 
 public class CreditCard {
     /*Создать класс CreditCard c полями номер счета, текущая сумма на счету. Добавьте
