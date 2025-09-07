@@ -1,4 +1,4 @@
-package lesson7.Practice;
+package lesson7.Practice.Person;
 
 public class Main {
     public static void main(String[] args) {

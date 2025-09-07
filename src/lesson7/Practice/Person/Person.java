@@ -1,4 +1,4 @@
-package lesson7.Practice;
+package lesson7.Practice.Person;
 
 public class Person {
     /*Создать класс Person с полями name, age, gender. Поле name сделать public, age
