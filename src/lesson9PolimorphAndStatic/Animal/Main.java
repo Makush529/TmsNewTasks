@@ -18,5 +18,11 @@ public class Main {
         rabbit.eat("Grass");
         rabbit.eat("Meat");
         rabbit.eat("Car");
+        System.out.println();
+
+        Cat cat = Cat.NewCat.methodNewCat();//static NewCat!!!!!!!!!!!
+        cat.voice();
+        cat.eat("Meat");
+
     }
 }
