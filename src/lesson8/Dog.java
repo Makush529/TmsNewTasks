@@ -1,6 +1,6 @@
 package lesson8;
 
-public class Dog implements Voice{
+public class Dog implements Voiceable {
 
     @Override
     public void doVoice() {

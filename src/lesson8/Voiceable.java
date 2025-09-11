@@ -1,5 +1,5 @@
 package lesson8;
 
-public interface Voice {
+public interface Voiceable {
     void doVoice();
 }
