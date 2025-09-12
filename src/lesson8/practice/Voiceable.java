@@ -1,4 +1,4 @@
-package lesson8;
+package lesson8.practice;
 
 public interface Voiceable {
     void doVoice();

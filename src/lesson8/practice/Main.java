@@ -1,4 +1,4 @@
-package lesson8;
+package lesson8.practice;
 /*Задача 1:
         1.1 Создать классы Dog, Cat, Main и интерфейс Voice c методом doVoice().
         1.2 В Dog и Cat имплементировать данный интерфейс и реализовать метод doVoice().

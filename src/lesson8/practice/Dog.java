@@ -1,4 +1,4 @@
-package lesson8;
+package lesson8.practice;
 
 public class Dog implements Voiceable {
 
