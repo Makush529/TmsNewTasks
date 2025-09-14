@@ -1,4 +1,4 @@
-package lesson10Object.toStringHashCodeEquals;
+package lesson10.clone.toStringHashCodeEquals1;
 
 import java.time.LocalDate;
 import java.util.Objects;

@@ -1,4 +1,4 @@
-package lesson10Object.toStringHashCodeEquals;
+package lesson10.clone.toStringHashCodeEquals1;
 
 public class Main {
     public static void main(String[] args) {

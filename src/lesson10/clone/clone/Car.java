@@ -1,4 +1,4 @@
-package lesson10Object.clone;
+package lesson10.clone.clone;
 
 public class Car implements Cloneable {
     private String name;

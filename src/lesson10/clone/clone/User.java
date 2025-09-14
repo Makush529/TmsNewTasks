@@ -1,4 +1,4 @@
-package lesson10Object.clone;
+package lesson10.clone.clone;
 
 import java.time.LocalDate;
 
