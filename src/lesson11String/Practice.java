@@ -1,5 +1,9 @@
 package lesson11String;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Locale;
+
 public class Practice {
     public static void main(String[] args) {
         /*Практика:
@@ -38,10 +42,22 @@ public class Practice {
         System.out.println("1.4 " + text.length());
         System.out.println("1.5 " + text.charAt(6));
         int[] idexText = {3, 8, 9};
-        System.out.print("1.6 ");
+        System.out.print("1.7 ");
         for (int dhgs : idexText) {
-            System.out.print(" " + text.charAt(dhgs));
+            System.out.print(" " + text.charAt(dhgs) + "\n");
         }
+
+        System.out.println("1.8 " + text.toUpperCase());
+        System.out.println("1.9 " + textNew.replace("е", "#^%"));
+        System.out.println("1.10 " + textNew.isEmpty());
+
+        String[] splitText = textNew.split("о");
+        for (String split : splitText) {
+            if (!split.isEmpty()) {
+                System.out.println(split);
+            }
+        }
+        System.out.println(Arrays.toString(splitText));
 
 
     }
