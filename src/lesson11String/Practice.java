@@ -19,13 +19,7 @@ public class Practice {
         1.9 Убрать все пробелы в строке с двух сторон.
         1.10 Проверить, пустая ли строка.
         1.11 Разбить строку на несколько по делителю.
-        Задача 2:
-        2.1 Создать объект StringBuilder c любой строкой.
-        2.2 Добавить к строке “xxxx”.
-        2.3 В 5-ю позицию вставить “y”.
-        2.4 Удалить символы с 3 по 6.
-        2.5 Перевернуть строку.
-        2.6 Преобразовать в String и вывести в консоль.*/
+        */
 
         String text = "Новый текст";
         String textNew = "Дополнительный текст и цифры 24";
@@ -58,6 +52,22 @@ public class Practice {
             }
         }
         System.out.println(Arrays.toString(splitText));
+        /*Задача 2:
+        2.1 Создать объект StringBuilder c любой строкой.
+        2.2 Добавить к строке “xxxx”.
+        2.3 В 5-ю позицию вставить “y”.
+        2.4 Удалить символы с 3 по 6.
+        2.5 Перевернуть строку.
+        2.6 Преобразовать в String и вывести в консоль.*/
+        StringBuilder textNew2 = new StringBuilder("Новая строка, новый текст, тест");
+        System.out.println("2.1 " + textNew2);
+        System.out.println("2.2 " + textNew2.append("xxxx"));
+        System.out.println("2.3 " + textNew2.insert(5,"y"));
+        System.out.println("2.4 " + textNew2.delete(3,6));
+        System.out.println("2.5 " + textNew2.reverse());
+        String string = textNew2.toString();
+        System.out.println("2.6 " + string);
+
 
 
     }
