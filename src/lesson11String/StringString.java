@@ -1,10 +1,7 @@
 package lesson11String;
 
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.HashSet;
 import java.util.Scanner;
-
-import static java.util.Arrays.*;
 
 public class StringString {
     public static void main(String[] args) {
@@ -53,20 +50,50 @@ public class StringString {
         System.out.println("2. Вывод по возрастанию количества символов: ");
         //Arrays.sort(strings);//не подойдет
         //System.out.println(Arrays.toString(strings));
+        //компаратор???
         //перестановка
         for (int i = 0; i < strings.length - 1; i++) {
-            for (int j = 0; j < strings.length - i-1; j++) {
+            for (int j = 0; j < strings.length - i - 1; j++) {
                 if (strings[j].length() > strings[j + 1].length()) {
                     String temp = strings[j];
                     strings[j] = strings[j + 1];
-                    strings[j+1] = temp;
+                    strings[j + 1] = temp;
                 }
             }
         }
-        for (String stringOut: strings){
+        //для 3 задания
+        int sumSimbol = 0;
+        for (String stringOut : strings) {
             System.out.println(stringOut + " " + stringOut.length());
+            sumSimbol = sumSimbol + stringOut.length();
         }
 
+        System.out.println("3. Вывести на консоль те строки, длина которых меньше средней, а также их длину");
+        int average = sumSimbol / strings.length;
+        System.out.println("средняя длина строк равна: " + average);
 
+        for (String string : strings) {
+            if (string.length() < average) {
+                System.out.println(string + " " + string.length());
+            }
+        }
+        System.out.println("4. Найти слово, состоящее только из различных символов. " +
+                "Если таких слов несколько, найти первое из них. ");
+
+        ochco:
+        for (String string : strings) {
+            String[] words = string.trim().split("\\s+");
+            for (String word : words) {
+                HashSet<Character> uniqSim = new HashSet<>();
+                for (char ch : word.toCharArray()) {
+                    if (!uniqSim.add(ch)) {
+                    }
+                }
+                System.out.println("первое слово с уникальными символами: " + word);
+                break ochco;
+
+
+            }
+        }
     }
 }
