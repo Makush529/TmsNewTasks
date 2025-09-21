@@ -95,5 +95,15 @@ public class StringString {
 
             }
         }
+        System.out.println("5. Вывести на консоль новую строку, которой задублирована каждая буква из начальной строки.");
+        String newString = "Hello World";
+        String newStringDublicate = "";
+
+        char[] simbol = newString.toCharArray();
+        for (char chars : simbol) {
+            newStringDublicate = newStringDublicate + chars + chars;
+
+        }
+        System.out.println(newStringDublicate);
     }
 }
