@@ -17,16 +17,13 @@ public class Star {
 //        document number: 1423-1512-51
 //        и т.д*/
 
-       /* +(45)5656566. Документ может содержать не всю информацию, т.е. например, может не
-        содержать номер телефона, или другое. Необходимо найти эту информацию и вывести
-        в консоль в формате:
-        email: teachmeskills@gmail.com
-        document number: 1423-1512-51*/
+// Почта teachmeskills@gmail.com, номер 1423-1512-51, телефон +(44)1234567.
+
         Scanner scanner = new Scanner(System.in);
         String string = scanner.nextLine();
 
         String mail = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}";
-        String fhone = "\\+\\d{2}\\d{7}";
+        String fhone = "\\+\\([\\d]{2}\\)[\\d]{7}";//хз скобки не могу поставить!!!\$
         String number = "[0-9]{4}-[0-9]{4}-[0-9]{2}";
 
         Pattern patternMail = Pattern.compile(mail);
@@ -37,9 +34,9 @@ public class Star {
         Matcher matcherFhone = patternFhone.matcher(string);
         Matcher matcherNumber = patternNumber.matcher(string);
 
-        searchAndPrint(matcherNumber, "number");
-        searchAndPrint(matcherFhone, "fhone");
-        searchAndPrint(matcherMail, "mail");
+        searchAndPrint(matcherNumber, "document number: ");
+        searchAndPrint(matcherFhone, "fhone number: ");
+        searchAndPrint(matcherMail, "email: ");
 
     }
 
