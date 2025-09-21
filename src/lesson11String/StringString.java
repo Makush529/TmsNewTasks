@@ -80,7 +80,7 @@ public class StringString {
         System.out.println("4. Найти слово, состоящее только из различных символов. " +
                 "Если таких слов несколько, найти первое из них. ");
 
-        ochco:
+        cicle:
         for (String string : strings) {
             String[] words = string.trim().split("\\s+");
             for (String word : words) {
@@ -90,7 +90,7 @@ public class StringString {
                     }
                 }
                 System.out.println("первое слово с уникальными символами: " + word);
-                break ochco;
+                break cicle;
 
 
             }
