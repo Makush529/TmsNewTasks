@@ -19,13 +19,16 @@ public class Authorisation {
 
     protected static boolean isValidLoginPassword(String login, String password, String confirmPassword)
             throws WrongLoginException, WrongPasswordException {
-        if (login.matches("^(?=.*)[^\\s]{20,}$")) {//lookahend!!(?!=)
+        //Длина login должна быть меньше 20 символов и не должен содержать пробелы.
+        if (!login.matches("\\w{1,20}")) {//lookahend!!(?!=)
             throw new WrongLoginException("Wrong login");
         }
-        if (password.matches("^(?=.*\\d)[^\\s]{20,}$")){
-            throw  new WrongPasswordException("Invalid password");
+//        password должна быть меньше 20 символов, не должен содержать пробелом и должен
+//        содержать хотя бы одну цифру.
+        if (!password.matches("^(?=.*\\d)(?=.*[A-Za-zА-яА-Я])[A-Za-zа-яА-Я0-9]{1,20}$")) {
+            throw new WrongPasswordException("Invalid password");
         }
-        if (!password.equals(confirmPassword)){
+        if (!password.equals(confirmPassword)) {
             throw new WrongPasswordException("Wrong password");
         }
         return true;
