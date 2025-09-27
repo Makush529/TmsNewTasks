@@ -5,7 +5,7 @@ import java.io.*;
 
 public class main {
     public static void main(String[] args) {
-        File romeo = new File("C:\\myProgect\\romeo-and-juliet.txt");
+        File romeo = new File("C:\\tests\\romeo-and-juliet.txt");
         String longestWord = "";
         //прочитать текст, собрать большую строку стрБ
         //преобразовать стрБ в стр
@@ -17,7 +17,7 @@ public class main {
             BufferedReader romeoBr = new BufferedReader(romeoFr);
             StringBuilder stringBuilderText = new StringBuilder();
             //char charOfText;
-            String lineOfText = romeoBr.readLine();
+            String lineOfText = "";
             while (lineOfText != null) {
                 lineOfText = romeoBr.readLine();
                 stringBuilderText.append(lineOfText).append(" ");
@@ -29,16 +29,17 @@ public class main {
                     longestWord = word;
                 }
             }
-            File newRomeo = new File("C:\\myProgect\\newRomeo.txt");
-            try {
-                FileWriter fileWriter = new FileWriter(newRomeo);
-                PrintWriter printWriter = new PrintWriter(fileWriter);
+            File newRomeo = new File("C:\\tests\\newRomeo.txt");
+
+            try (PrintWriter printWriter = new PrintWriter(newRomeo)) {
                 System.out.println(longestWord);
                 printWriter.println(longestWord);
-
             } catch (Exception e) {
+                System.out.println("косяк1");
             }
 
-        }catch (Exception ee){}
+        } catch (Exception ee) {
+            System.out.println("косяк2");
+        }
     }
 }
