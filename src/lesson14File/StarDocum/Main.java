@@ -16,33 +16,35 @@ public class Main {
         }
         File valueDoc = new File("C:\\tests\\valueDoc.txt ");
         File inValueDoc = new File("C:\\tests\\inValueDoc.txt");
-        try {
-            FileReader fileReaderTest = new FileReader(file);
-            FileWriter valueFileWriter = new FileWriter(valueDoc);
-            FileWriter inValueFileWriter = new FileWriter(inValueDoc);
-            BufferedReader bufferedReaderTest = new BufferedReader(fileReaderTest);
-            BufferedWriter valueBufferedWreaderTest = new BufferedWriter(valueFileWriter);
-            BufferedWriter inValueBufferedWreaderTest = new BufferedWriter(inValueFileWriter);
+        try (FileReader fileReaderTest = new FileReader(file);
+             FileWriter valueFileWriter = new FileWriter(valueDoc);
+             FileWriter inValueFileWriter = new FileWriter(inValueDoc);
+             BufferedReader bufferedReaderTest = new BufferedReader(fileReaderTest);
+             BufferedWriter valueBufferedWreaderTest = new BufferedWriter(valueFileWriter);
+             BufferedWriter inValueBufferedWreaderTest = new BufferedWriter(inValueFileWriter);) {
+
             //StringBuilder stringBuilderTest = new StringBuilder();
-            while (fileReaderTest.ready()) {
-                String line = bufferedReaderTest.readLine();
+            String line;
+            while ((line = bufferedReaderTest.readLine()) != null) {
                 if (isValue(line)) {
                     valueBufferedWreaderTest.write(line);
                     valueBufferedWreaderTest.newLine();
+                    System.out.println("valid " + line);
                 } else {
-                    inValueBufferedWreaderTest.write(line + inValueInfo(line));
+                    inValueBufferedWreaderTest.write(line +" "+ inValueInfo(line));
                     inValueBufferedWreaderTest.newLine();
+                    System.out.println("invalid " + line);
                 }
             }
         } catch (IOException e) {
             System.out.println("vse " + e.getMessage());
-        }catch (RuntimeException e2){
-            System.out.println("use "+ e2.getMessage());
+        } catch (RuntimeException e2) {
+            System.out.println("use " + e2.getMessage());
         }
     }
 
     private static boolean isValue(String text) {
-        return text.matches("^(docum|contract)\\s[0-9]{15}$");
+        return text.matches("^(docum|contract) [0-9]{15}$");
     }
 
     private static String inValueInfo(String text) {
@@ -50,13 +52,13 @@ public class Main {
         //Matcher matcher = pattern.matcher(text);
         String[] words = text.split(" ", 2);
         if (words.length != 2) {
-            System.out.println("неверный формат");
+            return "неверный формат";
         } else if (!(words[0].equals("docum") || words[0].equals("contract"))) {
-            System.out.println("неверное имя документа");
-        } else if (words[1].matches("\\d{15}")) {
-            System.out.println("неверный номер документа");
+            return "неверное имя документа";
+        } else if (!words[1].matches("\\d{15}")) {
+            return "неверный номер документа";
         }
-        return text;
+        return "непонятно";
     }
 }
 
