@@ -1,9 +1,8 @@
 package lesson14File;
 
-import javax.annotation.processing.Filer;
 import java.io.*;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         File romeo = new File("C:\\tests\\romeo-and-juliet.txt");
         String longestWord = "";

@@ -2,7 +2,7 @@ package lesson13;
 
 import java.util.Scanner;
 
-public class mainAuth {
+public class MainAuth {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String login, password, confirmPassword;
