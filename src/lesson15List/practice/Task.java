@@ -1,6 +1,8 @@
 package lesson15List.practice;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
 
 public class Task {
     public static void main(String[] args) {
@@ -30,6 +32,8 @@ public class Task {
         System.out.println(index + " вывод индекса по значению");
         boolean result = country.contains("Germany");
         System.out.println(result + " проверка содержится ли значение в массиве");
+        String[]countryArray = country.toArray(new String[country.size()]);
+        System.out.println(Arrays.toString(countryArray));
 
     }
 }
