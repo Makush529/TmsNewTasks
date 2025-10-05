@@ -2,11 +2,11 @@ package lesson15List.Home3;
 
 public class Main {
     public static void main(String[] args) {
-        Student student = new Student("bob", 4, 1, 3);
-        Student student2 = new Student("rob", 4, 1, 2);
-        Student student3 = new Student("ben", 4, 1, 5);
-        Student student4 = new Student("ned", 4, 1, 4);
-        Student student5 = new Student("roy", 4, 1, 3);
+        Student student = new Student("Bob", 4, 1, 3);
+        Student student2 = new Student("Rob", 4, 1, 2);
+        Student student3 = new Student("Ben", 4, 1, 5);
+        Student student4 = new Student("Ned", 4, 1, 4);
+        Student student5 = new Student("Roy", 4, 1, 3);
 
         Group group = new Group();
         group.addStudent(student);
