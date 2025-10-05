@@ -1,4 +1,4 @@
-package lesson15List;
+package lesson15List.practice;
 
 import java.util.ArrayList;
 import java.util.HashSet;
