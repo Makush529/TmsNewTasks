@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 public class Task1Practice {
     public static void main(String[] args) {
+        /*Задача 1:
+        Написать программу для вывода на консоль названия дня недели по введенной дате*/
         try {
             System.out.println("Введи дату в формате и узнаешь день недели 'yyyy.MM.dd'");
             Scanner scanner = new Scanner(System.in);
