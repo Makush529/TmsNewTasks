@@ -31,7 +31,10 @@ public class TaskStarDeque {
                 "([{{[(())]}}])",
                 "{{[]()}}}}",
                 "{[(])}"};
-        System.out.println(ballance(texts[0]));
+        for (String string: texts){
+            System.out.println(ballance(string));
+        }
+        System.out.println("проверка " + ballance(texts[0]));
 
     }
 
