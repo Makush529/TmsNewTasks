@@ -21,7 +21,8 @@ public class Task2HashMap {
         System.out.println(paris(pairs3));
 
     }
-    public static HashMap<String,String>paris(String[] strings){
+
+    public static HashMap<String, String> paris(String[] strings) {
         HashMap<String, String> stringHashMap = new HashMap<>();
         for (int i = 0; i < strings.length; i++) {
             char[] newStrings = strings[i].toCharArray();
