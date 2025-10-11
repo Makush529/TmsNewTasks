@@ -1,4 +1,4 @@
-package lesson17DateTimeApi;
+package lesson17DateTimeApi.practice;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

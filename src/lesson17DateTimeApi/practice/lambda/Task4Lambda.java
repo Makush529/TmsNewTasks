@@ -1,4 +1,4 @@
-package lesson17DateTimeApi.lambda;
+package lesson17DateTimeApi.practice.lambda;
 
 public class Task4Lambda {
     //    Задача 4:

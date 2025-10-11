@@ -1,4 +1,4 @@
-package lesson17DateTimeApi.lambda;
+package lesson17DateTimeApi.practice.lambda;
 
 public class Task3Lambda {
     public static void main(String[] args) {
