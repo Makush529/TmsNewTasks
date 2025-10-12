@@ -1,18 +1,16 @@
 package lesson17DateTimeApi;
 
 import java.util.Scanner;
-import java.util.function.Function;
+import java.util.function.Consumer;
 
-public class Task3 {
-    //    Задача 3:
-//    Используя Function реализовать лямбду, которая будет принимать в себя строку в
+public class Task4Concumer {
+    //    Используя Consumer реализовать лямбду, которая будет принимать в себя строку в
 //    формате “*сумма* BYN”(через пробел, вместо *сумма* вставить любое значение), а
-//    возвращать сумму, переведенную сразу в доллары.
+//    выводить сумму, переведенную сразу в доллары
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String text = scanner.nextLine();
-
-        Function<String, Double> toDollars = string -> {
+        Consumer<String> toDollar = string -> {
             String[] strings = string.split(" ");
             if (strings.length != 2) {
                 throw new IllegalArgumentException("format error");
@@ -20,11 +18,9 @@ public class Task3 {
             if (!strings[1].equals("BYN")) {
                 throw new IllegalArgumentException("format error");
             }
-            double sumMoney = Double.parseDouble(strings[0]);
-
-            sumMoney = sumMoney / 3.39;
-            return sumMoney;
+            double result = (Double.parseDouble(strings[0])) / 3.39;
+            System.out.println(result);
         };
-        System.out.println(toDollars.apply(text));
+        toDollar.accept(text);
     }
 }
