@@ -21,6 +21,5 @@ public class Task5 {
             return newText;
         };
         System.out.println(reverseString.get());
-
     }
 }
