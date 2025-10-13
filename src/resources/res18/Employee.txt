@@ -1,0 +1,10 @@
+Alice, Security, 120000
+Bob, IT, 90000
+Charlie, Security, 110000
+David, HR, 80000
+Eve, Marketing, 105000
+Frank, Finance, 130000
+Grace, Security, 115000
+Henry, IT, 95000
+Ivy, HR, 75000
+Jack, Marketing, 100000
