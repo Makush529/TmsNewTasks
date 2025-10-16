@@ -1,4 +1,4 @@
-package lesson18;
+package lesson18.Practice;
 
 public class User {
     protected String name;
