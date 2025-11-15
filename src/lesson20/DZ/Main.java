@@ -26,48 +26,50 @@ public class Main {
             try {
                 number[i] = scanner.nextInt();
                 i++;
-            }catch (InputMismatchException e){
+            } catch (InputMismatchException e) {
                 System.out.println("ERROR: invalid character! Try again!");
-            scanner.next();}
-        }
-            System.out.println(Arrays.toString(number));
-            return number;
-        }
-
-        private static class MaxThread implements Runnable {
-            private final int[] arr;
-
-            private MaxThread(int[] arr) {
-                this.arr = arr;
+                scanner.next();
             }
+        }
+        System.out.println(Arrays.toString(number));
+        return number;
+    }
 
-            @Override
-            public void run() {
-                int max = arr[0];
-                for (int i = 0; i < arr.length; i++) {
-                    if (max < arr[i]) {
-                        max = arr[i];
-                    }
+    private static class MaxThread implements Runnable {
+        private final int[] arr;
+
+        private MaxThread(int[] arr) {
+            this.arr = arr;
+        }
+
+        @Override
+        public void run() {
+            int max = arr[0];
+            for (int i = 0; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i];
                 }
-                System.out.println("Максимальное значение " + max);
             }
-        }
-        private static class MinThread implements Runnable {
-            private final int[] arr;
-
-            private MinThread(int[] arr) {
-                this.arr = arr;
-            }
-
-            @Override
-            public void run() {
-                int min = arr[0];
-                for (int i = 0; i < arr.length; i++) {
-                    if (min > arr[i]) {
-                        min = arr[i];
-                    }
-                }
-                System.out.println("Минимально значение " + min);
-            }
+            System.out.println("Максимальное значение " + max);
         }
     }
+
+    private static class MinThread implements Runnable {
+        private final int[] arr;
+
+        private MinThread(int[] arr) {
+            this.arr = arr;
+        }
+
+        @Override
+        public void run() {
+            int min = arr[0];
+            for (int i = 0; i < arr.length; i++) {
+                if (min > arr[i]) {
+                    min = arr[i];
+                }
+            }
+            System.out.println("Минимально значение " + min);
+        }
+    }
+}
